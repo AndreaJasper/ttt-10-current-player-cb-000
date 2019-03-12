@@ -2,19 +2,19 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 
 def turn_count(board)
-  count = 0
+  counter = 0
   board.each do |turn|
     if turn == "X" || turn == "O"
-      count += 1
+      counter += 1
       puts "#{counter}"
     end
-  count
+  counter
   end
 end
 
 
 def current_player(board)
-  if turn_count.even?
+  if turn_count % 2
     puts "X"
   else
     puts "O"
